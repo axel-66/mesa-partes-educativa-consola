@@ -1,7 +1,7 @@
 """Menú del prototipo de mesa de partes educativa."""
 
 from registro import registrar_expediente
-from consultas import menu_busqueda
+from consultas import listar_expedientes, menu_busqueda
 
 
 def mostrar_menu():
@@ -27,7 +27,7 @@ def main():
         elif opcion == "2":
             menu_busqueda()
         elif opcion == "3":
-            print("Esta función está pendiente de implementación.")
+            listar_expedientes()
         else:
             print("Opción inválida. Ingrese un número del 1 al 4.")
 

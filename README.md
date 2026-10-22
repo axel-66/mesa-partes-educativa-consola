@@ -16,7 +16,8 @@ py main.py
 Registro de expedientes con campos obligatorios, DNI de 8 dígitos,
 código único y fecha automática. Búsqueda por código o DNI desde un mismo
 submenú, leyendo el TXT. Por DNI se muestran todos los trámites del solicitante.
-Ordenamiento pendiente. En el menú principal, la opción 4 permite salir.
+Listado ascendente por código mediante ordenamiento por inserción, sin modificar
+el TXT. En el menú principal, la opción 3 lista y la opción 4 permite salir.
 
 Tipo de solicitud por opciones: constancia de estudios, certificado de estudios,
 constancia de matrícula, libreta u otro (se solicita especificarlo).

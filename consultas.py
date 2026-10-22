@@ -1,4 +1,4 @@
-"""Búsqueda secuencial de expedientes almacenados en TXT."""
+"""Búsqueda y listado ordenado de expedientes almacenados en TXT."""
 
 from archivos import leer_expedientes
 from registro import pedir_dni, pedir_texto
@@ -44,6 +44,37 @@ def buscar_expedientes(opcion):
         print("No se encontraron expedientes para el dato ingresado.")
     else:
         print(f"\nExpedientes encontrados: {encontrados}")
+
+
+def ordenar_por_codigo(expedientes):
+    """Ordena una copia mediante inserción, comparando la parte numérica."""
+    ordenados = expedientes.copy()
+    for indice in range(1, len(ordenados)):
+        actual = ordenados[indice]
+        posicion = indice - 1
+        while (posicion >= 0
+               and int(ordenados[posicion][0][4:]) > int(actual[0][4:])):
+            ordenados[posicion + 1] = ordenados[posicion]
+            posicion -= 1
+        ordenados[posicion + 1] = actual
+    return ordenados
+
+
+def listar_expedientes():
+    """Lee y muestra los registros en orden ascendente sin reescribir el TXT."""
+    try:
+        expedientes = leer_expedientes()
+    except (OSError, UnicodeError, ValueError) as error:
+        print(f"No se pudo consultar el archivo: {error}")
+        return
+    if not expedientes:
+        print("Todavía no hay expedientes registrados.")
+        return
+
+    print("\nEXPEDIENTES ORDENADOS POR CÓDIGO")
+    for expediente in ordenar_por_codigo(expedientes):
+        mostrar_expediente(expediente)
+    print(f"\nTotal de expedientes: {len(expedientes)}")
 
 
 def menu_busqueda():
