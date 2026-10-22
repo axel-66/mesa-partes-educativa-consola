@@ -33,3 +33,8 @@ codigo|nombres|apellidos|dni|tipo|asunto|fecha
 
 Los registros se conservan al cerrar el programa. Un DNI puede tener varios
 expedientes. El archivo con datos personales no se sube a GitHub.
+
+## Documentación
+
+- [Diseño, diagrama y pseudocódigo](DISENO.md)
+- [Resultados de pruebas técnicas](PRUEBAS.md)
