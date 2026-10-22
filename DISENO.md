@@ -19,11 +19,11 @@ Una fila por expediente, UTF-8, siete campos separados por `|`:
 | Posición en la lista | Campo | Regla |
 |---|---|---|
 | 0 | Código | Automático: `EXP-0001`; siguiente al mayor número guardado |
-| 1 | Nombres | Obligatorio; sin `|` ni saltos de línea |
-| 2 | Apellidos | Obligatorio; sin `|` ni saltos de línea |
+| 1 | Nombres | Obligatorio; sin separador vertical ni saltos de línea |
+| 2 | Apellidos | Obligatorio; sin separador vertical ni saltos de línea |
 | 3 | DNI | Texto de ocho dígitos ASCII; conserva ceros iniciales |
 | 4 | Tipo | Constancia de estudios, certificado de estudios, constancia de matrícula, libreta u otro especificado |
-| 5 | Asunto | Texto obligatorio; sin `|` ni saltos de línea |
+| 5 | Asunto | Texto obligatorio; sin separador vertical ni saltos de línea |
 | 6 | Fecha | Automática según el reloj local, formato `AAAA-MM-DD` |
 
 Ejemplo ficticio:
