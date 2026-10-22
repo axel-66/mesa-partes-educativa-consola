@@ -1,4 +1,6 @@
-"""Menú inicial del prototipo de mesa de partes educativa."""
+"""Menú del prototipo de mesa de partes educativa."""
+
+from registro import registrar_expediente
 
 
 def mostrar_menu():
@@ -20,7 +22,9 @@ def main():
         if opcion == "5":
             print("Programa finalizado.")
             break
-        elif opcion in ("1", "2", "3", "4"):
+        elif opcion == "1":
+            registrar_expediente()
+        elif opcion in ("2", "3", "4"):
             print("Esta función está pendiente de implementación.")
         else:
             print("Opción inválida. Ingrese un número del 1 al 5.")

@@ -1,7 +1,7 @@
 # Mesa de partes educativa
 
 Proyecto de Fundamentos de Programación (CIIN1205P).
-Aplicación local en Python con consola y almacenamiento previsto en TXT.
+Aplicación local en Python con consola y almacenamiento en TXT.
 
 ## Ejecución
 
@@ -13,5 +13,17 @@ py main.py
 
 ## Avance actual
 
-Menú inicial con validación de opciones y salida.
-Registro, búsquedas y ordenamiento pendientes.
+Registro de expedientes con campos obligatorios, DNI de 8 dígitos,
+código único y fecha automática. Búsquedas y ordenamiento pendientes.
+
+## Archivo TXT
+
+Se crea automáticamente `datos/expedientes.txt` al registrar el primer trámite.
+Cada línea contiene:
+
+```text
+codigo|nombres|apellidos|dni|tipo|asunto|fecha
+```
+
+Los registros se conservan al cerrar el programa. Un DNI puede tener varios
+expedientes. El archivo con datos personales no se sube a GitHub.
