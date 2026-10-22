@@ -16,6 +16,9 @@ py main.py
 Registro de expedientes con campos obligatorios, DNI de 8 dígitos,
 código único y fecha automática. Búsquedas y ordenamiento pendientes.
 
+Tipo de solicitud por opciones: constancia de estudios, certificado de estudios,
+constancia de matrícula, libreta u otro (se solicita especificarlo).
+
 ## Archivo TXT
 
 Se crea automáticamente `datos/expedientes.txt` al registrar el primer trámite.

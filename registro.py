@@ -26,6 +26,27 @@ def pedir_dni():
         print("El DNI debe contener exactamente 8 dígitos del 0 al 9.")
 
 
+def pedir_tipo_solicitud():
+    """Permite seleccionar un trámite o especificar uno diferente."""
+    tipos = [
+        "Constancia de estudios",
+        "Certificado de estudios",
+        "Constancia de matrícula",
+        "Libreta",
+        "Otro",
+    ]
+    while True:
+        print("\nTIPO DE SOLICITUD")
+        for numero, tipo in enumerate(tipos, start=1):
+            print(f"{numero}. {tipo}")
+        opcion = input("Seleccione una opción: ").strip()
+        if opcion in ("1", "2", "3", "4"):
+            return tipos[int(opcion) - 1]
+        if opcion == "5":
+            return pedir_texto("Especifique el tipo de solicitud: ")
+        print("Opción inválida. Ingrese un número del 1 al 5.")
+
+
 def registrar_expediente():
     """Solicita los datos y confirma el registro solo después de guardarlo."""
     print("\nREGISTRAR EXPEDIENTE")
@@ -33,7 +54,7 @@ def registrar_expediente():
         nombres = pedir_texto("Nombres: ")
         apellidos = pedir_texto("Apellidos: ")
         dni = pedir_dni()
-        tipo = pedir_texto("Tipo de solicitud: ")
+        tipo = pedir_tipo_solicitud()
         asunto = pedir_texto("Asunto: ")
         fecha = date.today().isoformat()
         codigo = guardar_expediente(nombres, apellidos, dni, tipo, asunto, fecha)
